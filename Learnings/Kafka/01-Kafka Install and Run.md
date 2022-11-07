@@ -49,3 +49,7 @@ docker compose logs broker -f
 docker compose logs zookeeper -f
 ```
 
+### Stop docker compose
+```bash
+docker compose down
+```
