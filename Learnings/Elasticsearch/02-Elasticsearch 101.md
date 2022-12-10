@@ -39,20 +39,20 @@ curl -X PUT "localhost:9200/twitter?pretty" -H 'Content-Type: application/json' 
 curl -X DELETE "localhost:9200/twitter?pretty"
 ```
 ## Data
-### Add a document PUT /{_index}/{_type}/{_id}
+### Add a document PUT /{_index}/_doc/{_id}
 ```bash
-curl -X PUT "localhost:9200/twitter/tweets/1" -H 'Content-Type: application/json' -d'
+curl -X PUT "localhost:9200/twitter/_doc/1" -H 'Content-Type: application/json' -d'
 {
   "course": "Kafka for Beginners",
   "instructor": "Stephane Maarek",
   "module": "ElasticSearch"
 }'
 ```
-### Fetch a document GET /{_index}/{_type}/{_id}
+### Fetch a document GET /{_index}/_doc/{_id}
 ```bash
-curl -X GET "localhost:9200/twitter/tweets/1"
+curl -X GET "localhost:9200/twitter/_doc/1"
 ```
-### Delete a document DELETE /{_index}/{_type}/{_id}
+### Delete a document DELETE /{_index}/_doc/{_id}
 ```bash
-curl -X DELETE "localhost:9200/twitter/tweets/1"
+curl -X DELETE "localhost:9200/twitter/_doc/1"
 ```
